@@ -14,8 +14,8 @@ public class SchoolController {
 
     @GetMapping("/school/update")
     public String getSchoolUpdate(Model model,
-                                  @RequestParam Long id
-    ) {
+                                  @RequestParam Long id) {
+
         model.addAttribute("school", repository.findById(id));
 
         return "school_update";
